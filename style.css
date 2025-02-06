@@ -8,20 +8,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ajusta la altura mínima */
-  overflow-y: auto; /* Permite desplazamiento */
+  min-height: 100vh;
+  overflow-y: auto;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .container {
   width: 90%;
-  max-width: 600px; /* Aumenta el tamaño máximo para pantallas más grandes */
+  max-width: 600px;
 }
 
 .screen, .message {
   width: 100%;
-  max-width: 500px; /* Ajusta el tamaño para mejor visibilidad */
+  max-width: 500px;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -74,32 +74,29 @@ body {
   color: black;
 }
 
+/* 📌 Ajuste del mensaje para que no se corte en móviles */
 .message {
   background: #111;
   color: #00ff00;
-  padding: 20px;
+  padding: 15px;
   margin-top: 20px;
   border: 4px solid #00ff00;
   border-radius: 10px;
   box-shadow: 0px 0px 15px #00ff00;
   
-  /* 🔹 Garantiza que se vea desde el inicio */
-  min-height: 120px; /* Espacio suficiente para mensajes cortos */
-  max-height: 80vh; /* Evita que sea más grande que la pantalla */
-  overflow-y: auto; /* Permite desplazamiento si es necesario */
-  scroll-behavior: smooth; /* Desplazamiento suave */
-  overflow-anchor: none; /* Evita que el navegador "recuerde" la posición */
-  
-  /* 🔹 Ajustes para el contenido interno */
-  word-wrap: break-word;
-  white-space: normal;
-  text-align: center;
-  
-  /* 🔹 Evita centrado automático de Flexbox */
+  min-height: 150px;
+  max-height: 85vh;
+  overflow-y: auto;
+  scroll-behavior: smooth; 
+  overflow-anchor: none; 
+
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Asegura que el contenido inicie desde arriba */
-  justify-content: flex-start; 
+  align-items: flex-start; 
+  justify-content: flex-start;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 /* Oculta el mensaje hasta que se active */
@@ -130,6 +127,7 @@ body {
   }
 }
 
+/* Ajuste especial para móviles */
 @media (max-width: 480px) {
   .title {
     font-size: 14px;
@@ -144,11 +142,10 @@ body {
     padding: 8px 15px;
   }
 
-   .message {
-    font-size: 14px;
-    padding: 15px;
-    min-height: 140px; /* Asegura espacio suficiente */
-    max-height: 70vh;
+  .message {
+    font-size: 12px;
+    padding: 10px;
+    max-height: 90vh;
   }
 }
 
@@ -217,4 +214,5 @@ body {
   color: gray;
   margin-top: 15px;
 }
+
 
