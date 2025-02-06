@@ -144,3 +144,69 @@ body {
   }
 }
 
+/* Pregunta de San Valentín */
+.valentine-question p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Botones */
+.btn-yes, .btn-no {
+  background: black;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  box-shadow: 0px 0px 5px #00ff00;
+  transition: 0.2s;
+}
+
+.btn-yes:hover {
+  background: red;
+  color: white;
+}
+
+.btn-no:hover {
+  background: gray;
+  color: white;
+}
+
+/* Contenedor de corazones */
+.heart-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Estilo de corazones vacíos */
+.heart {
+  width: 30px;
+  height: 30px;
+  background: black;
+  display: inline-block;
+  clip-path: polygon(50% 15%, 61% 3%, 75% 0, 90% 7%, 100% 25%, 95% 40%, 80% 65%, 50% 100%, 20% 65%, 5% 40%, 0 25%, 10% 7%, 25% 0, 39% 3%);
+  transition: background 0.5s ease-in-out;
+}
+
+/* Animación de carga de corazones */
+.heart.full {
+  background: red;
+}
+
+/* Mensaje final */
+.love-message {
+  font-size: 18px;
+  margin-top: 10px;
+  color: red;
+}
+
+/* Mensaje de rechazo */
+.no-message {
+  font-size: 18px;
+  color: gray;
+  margin-top: 15px;
+}
+
