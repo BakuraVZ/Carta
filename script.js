@@ -1,11 +1,15 @@
 function startMessage() {
-  document.querySelector(".screen").style.display = "none";
-  document.querySelector(".message").classList.remove("hidden");
+    document.querySelector(".screen").style.display = "none";
+    document.querySelector(".message").classList.remove("hidden");
 }
 
 function showHearts() {
-    document.querySelector(".valentine-question").style.display = "none";
-    document.querySelector(".hearts").classList.remove("hidden");
+    let questionBox = document.querySelector(".valentine-question");
+    let heartsContainer = document.querySelector(".hearts");
+    let loveMessage = document.querySelector(".love-message");
+
+    if (questionBox) questionBox.style.display = "none";
+    if (heartsContainer) heartsContainer.classList.remove("hidden");
 
     let hearts = document.querySelectorAll(".heart");
     hearts.forEach((heart, index) => {
@@ -15,11 +19,14 @@ function showHearts() {
     });
 
     setTimeout(() => {
-        document.querySelector(".love-message").classList.remove("hidden");
-    }, 3000); // Muestra el mensaje después de llenar los corazones
+        if (loveMessage) loveMessage.classList.remove("hidden");
+    }, 3000);
 }
 
 function showNoMessage() {
-    document.querySelector(".valentine-question").style.display = "none";
-    document.querySelector(".no-message").classList.remove("hidden");
+    let questionBox = document.querySelector(".valentine-question");
+    let noMessage = document.querySelector(".no-message");
+
+    if (questionBox) questionBox.style.display = "none";
+    if (noMessage) noMessage.classList.remove("hidden");
 }
