@@ -84,6 +84,13 @@ body {
   box-shadow: 0px 0px 15px #00ff00;
   max-height: 80vh; /* Evita que sea demasiado grande */
   overflow-y: auto; /* Permite desplazamiento interno si es necesario */
+  
+  /* 📌 Ajustes para centrar el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centra el texto */
 }
 
 /* Oculta el mensaje hasta que se active */
