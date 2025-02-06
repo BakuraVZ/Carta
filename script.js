@@ -1,5 +1,5 @@
 function startMessage() {
-    document.querySelector(".screen").style.display = "none";
+    document.querySelector(".screen").classList.add("hidden");
     document.querySelector(".message").classList.remove("hidden");
 }
 
