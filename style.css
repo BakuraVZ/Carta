@@ -82,15 +82,17 @@ body {
   border: 4px solid #00ff00;
   border-radius: 10px;
   box-shadow: 0px 0px 15px #00ff00;
-  max-height: 80vh; /* Evita que sea demasiado grande */
-  overflow-y: auto; /* Permite desplazamiento interno si es necesario */
   
-  /* 📌 Ajustes para centrar el contenido */
+  /* 🔹 Ajustes para altura dinámica */
+  max-height: 80vh; /* Evita que sea más grande que la pantalla */
+  overflow-y: auto; /* Activa el desplazamiento si es necesario */
+  word-wrap: break-word; /* Rompe palabras largas */
+  white-space: normal; /* Asegura que el texto fluya bien */
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; /* Centra el texto */
 }
 
 /* Oculta el mensaje hasta que se active */
@@ -99,8 +101,6 @@ body {
 }
 
 /* 🔹 RESPONSIVIDAD 🔹 */
-
-/* Para pantallas más grandes (1024px en adelante) */
 @media (min-width: 1024px) {
   .container {
     max-width: 700px;
@@ -123,7 +123,6 @@ body {
   }
 }
 
-/* Para pantallas pequeñas (móviles, menos de 480px) */
 @media (max-width: 480px) {
   .title {
     font-size: 14px;
@@ -141,8 +140,8 @@ body {
   .message {
     font-size: 12px;
     padding: 15px;
-    max-height: 80vh;
-    overflow-y: auto;
+    max-height: 70vh; /* Reduce el tamaño en móviles */
+    overflow-y: auto; /* Permite desplazamiento */
   }
 }
 
