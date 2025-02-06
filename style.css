@@ -8,8 +8,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Cambia height a min-height */
+  overflow-y: auto;  /* Permite desplazamiento vertical si es necesario */
+  padding: 20px; /* Agrega espacio extra alrededor */
 }
+
 
 .container {
   width: 90%;
@@ -73,6 +76,8 @@ body {
   border: 4px solid #00ff00;
   border-radius: 10px;
   box-shadow: 0px 0px 15px #00ff00;
+  max-height: 80vh; /* Evita que sea demasiado grande */
+  overflow-y: auto; /* Permite desplazamiento interno si es necesario */
 }
 
 .hidden {
