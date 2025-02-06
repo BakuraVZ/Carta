@@ -92,8 +92,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  justify-content: flex-start;
+  align-items: center; /* 📌 Asegura que el texto y contenido se centren */
   text-align: center;
   word-wrap: break-word;
   white-space: normal;
@@ -178,7 +177,7 @@ body {
   color: white;
 }
 
-/* Contenedor de corazones */
+/* 📌 Ajuste del contenedor de corazones */
 .heart-container {
   display: flex;
   justify-content: center;
@@ -187,6 +186,7 @@ body {
   gap: 10px;
   margin-top: 20px;
   width: 100%;
+  text-align: center; /* 📌 Centrado adicional */
 }
 
 /* Estilo de corazones vacíos */
@@ -204,8 +204,7 @@ body {
   background: red;
 }
 
-
-/* Mensaje final */
+/* 📌 Centrado del mensaje final */
 .love-message, .no-message {
   font-size: 18px;
   color: red;
@@ -214,6 +213,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* 📌 Asegura que esté centrado en móviles */
   width: 100%;
 }
 
@@ -222,4 +222,16 @@ body {
   color: gray;
 }
 
+/* Ajuste para asegurar que en móviles todo esté bien alineado */
+@media (max-width: 480px) {
+  .heart-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .love-message, .no-message {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
 
