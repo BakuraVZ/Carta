@@ -12,6 +12,7 @@ body {
   overflow-y: auto;
   padding: 20px;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
 .container {
@@ -74,7 +75,7 @@ body {
   color: black;
 }
 
-/* 📌 Ajuste del mensaje para que no se corte en móviles */
+/* Ajuste del mensaje */
 .message {
   background: #111;
   color: #00ff00;
@@ -83,16 +84,15 @@ body {
   border: 4px solid #00ff00;
   border-radius: 10px;
   box-shadow: 0px 0px 15px #00ff00;
-  
   min-height: 150px;
   max-height: 85vh;
   overflow-y: auto;
   scroll-behavior: smooth; 
   overflow-anchor: none; 
-
   display: flex;
   flex-direction: column;
-  align-items: center; /* 📌 Asegura que el texto y contenido se centren */
+  align-items: center; 
+  justify-content: flex-start;
   text-align: center;
   word-wrap: break-word;
   white-space: normal;
@@ -103,7 +103,7 @@ body {
   display: none;
 }
 
-/* 🔹 RESPONSIVIDAD 🔹 */
+/* Responsividad */
 @media (min-width: 1024px) {
   .container {
     max-width: 700px;
@@ -177,7 +177,7 @@ body {
   color: white;
 }
 
-/* 📌 Ajuste del contenedor de corazones */
+/* Contenedor de corazones */
 .heart-container {
   display: flex;
   justify-content: center;
@@ -186,10 +186,10 @@ body {
   gap: 10px;
   margin-top: 20px;
   width: 100%;
-  text-align: center; /* 📌 Centrado adicional */
+  text-align: center;
 }
 
-/* Estilo de corazones vacíos */
+/* Estilo de corazones */
 .heart {
   width: 30px;
   height: 30px;
@@ -204,16 +204,16 @@ body {
   background: red;
 }
 
-/* 📌 Centrado del mensaje final */
+/* Mensaje final */
 .love-message, .no-message {
   font-size: 18px;
   color: red;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* 📌 Asegura que esté centrado en móviles */
+  justify-content: center;
   width: 100%;
 }
 
@@ -222,16 +222,4 @@ body {
   color: gray;
 }
 
-/* Ajuste para asegurar que en móviles todo esté bien alineado */
-@media (max-width: 480px) {
-  .heart-container {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .love-message, .no-message {
-    font-size: 16px;
-    padding: 10px;
-  }
-}
 
