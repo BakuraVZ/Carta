@@ -9,11 +9,9 @@ function showHearts() {
     let loveMessage = document.querySelector(".love-message");
     let noMessage = document.querySelector(".no-message");
 
-    // Ocultar la pregunta y cualquier otro mensaje
     if (questionBox) questionBox.style.display = "none";
     if (noMessage) noMessage.classList.add("hidden");
 
-    // Mostrar el contenedor de corazones
     if (heartsContainer) heartsContainer.classList.remove("hidden");
 
     let hearts = document.querySelectorAll(".heart");
@@ -24,20 +22,20 @@ function showHearts() {
         return;
     }
 
-    let delay = 500; // Tiempo entre cada corazón
+    let delay = 500;
 
     hearts.forEach((heart, index) => {
         setTimeout(() => {
             heart.classList.add("full");
 
-            // Cuando el último corazón se llena, mostrar el mensaje final
             if (index === totalHearts - 1) {
                 setTimeout(() => {
                     if (loveMessage) {
+                        loveMessage.style.display = "block"; // <-- Asegura que se muestra
                         loveMessage.classList.remove("hidden");
-                        loveMessage.classList.add("show"); // Asegura que la clase correcta se active
+                        loveMessage.classList.add("show");
                     }
-                }, delay); // Pequeño retraso para una mejor transición
+                }, delay);
             }
         }, index * delay);
     });
@@ -49,7 +47,8 @@ function showNoMessage() {
 
     if (questionBox) questionBox.style.display = "none";
     if (noMessage) {
+        noMessage.style.display = "block"; // <-- Asegura que se muestra
         noMessage.classList.remove("hidden");
-        noMessage.classList.add("show"); // Asegurar que la clase correcta se active
+        noMessage.classList.add("show");
     }
 }
