@@ -179,13 +179,13 @@ body {
 
 /* Contenedor de corazones */
 .heart-container {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
-  width: 100%;
   text-align: center;
 }
 
@@ -215,6 +215,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-height: 50px; /* Asegura que tenga espacio */
 }
 
 /* Mensaje de rechazo */
