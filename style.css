@@ -83,12 +83,17 @@ body {
   border-radius: 10px;
   box-shadow: 0px 0px 15px #00ff00;
   
-  /* 🔹 Ajustes para altura dinámica */
+  /* 🔹 Altura dinámica mejorada */
+  min-height: 100px; /* Ajusta el espacio mínimo para mensajes cortos */
   max-height: 80vh; /* Evita que sea más grande que la pantalla */
-  overflow-y: auto; /* Activa el desplazamiento si es necesario */
-  word-wrap: break-word; /* Rompe palabras largas */
-  white-space: normal; /* Asegura que el texto fluya bien */
+  overflow-y: auto; /* Permite desplazamiento si es necesario */
+  
+  /* 🔹 Ajustes para texto largo */
+  word-wrap: break-word;
+  white-space: normal;
   text-align: center;
+  
+  /* 🔹 Flexbox para centrar bien el contenido */
   display: flex;
   flex-direction: column;
   justify-content: center;
