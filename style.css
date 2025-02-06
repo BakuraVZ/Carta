@@ -8,21 +8,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Cambia height a min-height */
-  overflow-y: auto;  /* Permite desplazamiento vertical si es necesario */
-  padding: 20px; /* Agrega espacio extra alrededor */
+  min-height: 100vh; /* Ajusta la altura mínima */
+  overflow-y: auto; /* Permite desplazamiento */
+  padding: 20px;
+  box-sizing: border-box;
 }
-
 
 .container {
   width: 90%;
-  max-width: 400px;
+  max-width: 600px; /* Aumenta el tamaño máximo para pantallas más grandes */
+}
+
+.screen, .message {
+  width: 100%;
+  max-width: 500px; /* Ajusta el tamaño para mejor visibilidad */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .screen {
   background: #222;
   border: 4px solid #00ff00;
-  padding: 20px;
   border-radius: 10px;
   position: relative;
   box-shadow: 0 0 15px #00ff00;
@@ -80,7 +86,54 @@ body {
   overflow-y: auto; /* Permite desplazamiento interno si es necesario */
 }
 
+/* Oculta el mensaje hasta que se active */
 .hidden {
   display: none;
+}
+
+/* 🔹 RESPONSIVIDAD 🔹 */
+
+/* Para pantallas más grandes (1024px en adelante) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .screen, .message {
+    max-width: 600px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .start-btn {
+    font-size: 16px;
+  }
+}
+
+/* Para pantallas pequeñas (móviles, menos de 480px) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+  }
+
+  .start-btn {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  .message {
+    font-size: 12px;
+    padding: 15px;
+  }
 }
 
