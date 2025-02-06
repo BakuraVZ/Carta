@@ -182,8 +182,11 @@ body {
 .heart-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
+  width: 100%;
 }
 
 /* Estilo de corazones vacíos */
@@ -201,18 +204,22 @@ body {
   background: red;
 }
 
+
 /* Mensaje final */
-.love-message {
+.love-message, .no-message {
   font-size: 18px;
-  margin-top: 10px;
   color: red;
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* Mensaje de rechazo */
 .no-message {
-  font-size: 18px;
   color: gray;
-  margin-top: 15px;
 }
 
 
